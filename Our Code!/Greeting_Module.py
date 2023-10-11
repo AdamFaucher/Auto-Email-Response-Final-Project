@@ -18,13 +18,13 @@ def generate_greeting(sender_name):
     
     if 'Professor' in sender_name:
         greeting_string = 'Dear ' + sender_name + ','
-        sender_type_Prof = True
+        sender_type_prof = True
     if 'Dr' in sender_name:
         greeting_string = 'Dear ' + sender_name + ','
         sender_type_prof = True
     elif 'Professor' or 'Dr' not in sender_name:
         greeting_string = 'Hello ' + sender_name + ','
         sender_type_prof = False
-    return (greeting_string, sender_type_Prof)
+    return (greeting_string, sender_type_prof)
 
 generate_greeting('Professor Andrews')
