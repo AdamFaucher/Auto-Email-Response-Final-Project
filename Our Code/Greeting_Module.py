@@ -10,7 +10,7 @@ def generate_email_greeting(sender_name, is_professional=True):
     A function that generates a professional "Hello, [SENDER NAME]," style greeting to the email
         
     :Param string of the email sender's name'
-    :Return larger string of the email sender's with the greeting'
+    :Return larger string of the email sender's name with the greeting'
     '''
     if is_professional:
         return f"Dear {sender_name},"
