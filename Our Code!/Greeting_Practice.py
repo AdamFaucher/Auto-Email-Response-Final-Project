@@ -11,6 +11,7 @@ def generate_email_greeting(sender_name):
     Generates an email greeting and determines the sender_type based on user input.
 
     :param user_name: The name of the user or sender.
+    :return: A tuple containing the email greeting and sender_type.
     '''
     sender_type = "Unknown"
     greeting = f"Hello {sender_name},"
