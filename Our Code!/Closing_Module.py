@@ -3,7 +3,7 @@
 """
 Created on Thu Oct  5 10:28:47 2023
 
-@author: adamfaucher
+@author: cqlambert
 """
 
 def generate_closing_prof():

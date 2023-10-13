@@ -3,7 +3,7 @@
 """
 Created on Thu Oct  5 10:27:03 2023
 
-@author: adamfaucher
+@author: cqlambert
 """
 
 def generate_greeting():
