@@ -8,10 +8,10 @@ Created on Thu Oct  5 10:27:03 2023
 
 def generate_greeting(emails):
     '''
-    A function that generates a professional "Hello, [SENDER NAME]," style greeting to the email
+    A function that generates a professional "Dear, [SENDER NAME]," style greeting to the email
     
-    :Param
-    :Return
+    :Param emails: a string of text that the code reads through
+    :Return : a greeting in the style of "Dear (first name) (last name) or just "hello" if no name is provided
     '''
     
     greetings = []
