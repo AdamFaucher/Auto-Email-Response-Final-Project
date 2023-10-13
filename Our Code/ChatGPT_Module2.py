@@ -3,7 +3,7 @@ import openai
 secret_key = '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'
 openai.api_key = secret_key
 openai.api_key_path = "/Users/adamfaucher/Documents/GitHub/Auto-Email-Response-Final-Project/Our Code/key.txt"
-
+#ChatGPT was used to generate some of this code https://chat.openai.com/
 def generate_email_response(email_text, professional=True):
     '''
     A function that generates an email response, either professional or friendly.

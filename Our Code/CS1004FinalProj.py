@@ -2,7 +2,7 @@
 from ChatGPT_Module2 import generate_email_response
 from Closing_Module import generate_email_closing
 from Greeting_Module import generate_email_greeting
-
+#ChatGPT was used to generate some of this code https://chat.openai.com/
 # Ask the user whether the email is professional
 user_input_professional = input("Is this a professional email? (yes/no): ").strip().lower()
 professional = user_input_professional == 'yes'
