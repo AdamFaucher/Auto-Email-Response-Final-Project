@@ -1,5 +1,5 @@
 
-from ChatGPT_Module import generate_email_response
+from ChatGPT_Module2 import generate_email_response
 from Closing_Module import generate_email_closing
 from Greeting_Module import generate_email_greeting
 

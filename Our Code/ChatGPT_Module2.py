@@ -1,8 +1,8 @@
 import openai
 
-secret_key = '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'
+secret_key = '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'
 openai.api_key = secret_key
-openai.api_key_path = "/Users/adamfaucher/Documents/GitHub/Auto-Email-Response-Final-Project/Our Code!/key.txt"
+openai.api_key_path = "/Users/adamfaucher/Documents/GitHub/Auto-Email-Response-Final-Project/Our Code/key.txt"
 
 def generate_email_response(email_text, professional=True):
     '''
@@ -17,14 +17,14 @@ def generate_email_response(email_text, professional=True):
     else:
         prompt_type = "colloquial"
 
-    prompt = f'Generate a {prompt_type} 5 to 8 line email body response (without a greeting or closing) to the following email:\n{email_text}\n\nResponse:'
+    prompt = f'Generate a {prompt_type} 5 to 8 line email body response (without a greeting or closing) to the following email, and nothing more:\n{email_text}\n\nResponse:'
     response = openai.Completion.create(
         engine="davinci",
         prompt=prompt,
-        max_tokens=200,
+        max_tokens=50,
         n=1,
         stop=None,
-        temperature=0.7,
+        temperature=0.5,
     )
     return response.choices[0].text.strip()
 

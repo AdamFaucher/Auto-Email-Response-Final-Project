@@ -15,5 +15,5 @@ def generate_email_greeting(sender_name, is_professional=True):
     if is_professional:
         return f"Dear {sender_name},"
     else:
-        return f"Hello {sender_name}"
+        return f"Hello {sender_name},"
 
