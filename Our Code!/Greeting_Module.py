@@ -35,9 +35,9 @@ def generate_greeting(emails):
 
     return greetings
 
-if __name__ == "__main__":
-    email_list = ["john.doe@example.com", "jane.smith@example.com", "info@company.com"]
-    greetings = generate_greetings(email_list)
+#if __name__ == "__main__":
+   # email_list = ["john.doe@example.com", "jane.smith@example.com", "info@company.com"]
+   # greetings = generate_greetings(email_list)
 
-    for email, greeting in zip(email_list, greetings):
-        print(f"{greeting} Sending an email to {email}")
+    #for email, greeting in zip(email_list, greetings):
+        #print(f"{greeting} Sending an email to {email}")
