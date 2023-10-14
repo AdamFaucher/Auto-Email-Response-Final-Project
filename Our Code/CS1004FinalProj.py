@@ -1,33 +1,26 @@
-
 from ChatGPT_Module2 import generate_email_response
+from Greeting_Practice import generate_email_greeting
+from Greeting_Practice import is_professional
 from Closing_Module import generate_email_closing
-from Greeting_Module import generate_email_greeting
+
 #ChatGPT was used to generate some of this code https://chat.openai.com/
-# Ask the user whether the email is professional
-user_input_professional = input("Is this a professional email? (yes/no): ").strip().lower()
-professional = user_input_professional == 'yes'
 
-# Example usage of the functions
-user_input_name = input("Enter your name: ")
-user_input_sender_name = input("Enter the sender's name: ")
+# Creating the greeting of the email
+input_sender_name = input("Enter the sender's name: ")
+professional = is_professional(input_sender_name)
+email_greeting = generate_email_greeting(input_sender_name, professional)[0]
+print("Email Greeting:", email_greeting,"\n")
 
-email_closing = generate_email_closing(user_input_name, professional)
-email_greeting = generate_email_greeting(user_input_sender_name, professional)
-
-print("Email Greeting:")
-print(email_greeting)
+# Creating the closing of the email
+input_user_name = input("Enter your name: ")
+email_closing = generate_email_closing(input_user_name, professional)
+print("Email Closing:", email_closing, '\n')
 
 # Get user's email text
-email_text = input('Paste the email text here:\n')
+email_text = input('Paste the email text here:')
 
 # Generate email response
 response = generate_email_response(email_text, professional)
 
-print("\nGenerated Response:")
-print(response)
-
-print("Email Closing:")
-print(email_closing)
-
-
-
+print("Generated Response:", response)
+print('\nFull response:\n\n', email_greeting, '\n', response, '\n', email_closing)

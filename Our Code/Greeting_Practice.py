@@ -5,34 +5,32 @@ Created on Tue Oct 10 09:45:03 2023
 
 @author: adamfaucher
 """
-
-def generate_email_greeting(sender_name):
+def is_professional(sender_name):
+    professional = False
+    professional_titles = ['Professor', 'Prof', 'Dr.', 'Dr ', 'Mrs.','Mrs ', 'Mr.', 'Mr ', 'Ms.', 'Ms ', 'Mx.', 'Mx ','Pastor', 'Father', 'Dean', 'Sir', 'Madam', 'Dame']
+    for title in professional_titles:
+        if title in sender_name:
+            professional = True
+    return professional
+            
+def generate_email_greeting(sender_name, professional=True):
     '''
     Generates an email greeting and determines the sender_type based on user input.
 
     :param user_name: The name of the user or sender.
     :return: A tuple containing the email greeting and sender_type.
     '''
-    sender_type = "Unknown"
     greeting = f"Hello {sender_name},"
-
-    if "Professor" in sender_name:
-        sender_type = "Professional"
-    elif "Dr." in sender_name:
-        sender_type = "Professional"
-    elif "Mr." in sender_name:
-        sender_type = "Professional"
-    elif "Ms." in sender_name:
-        sender_type = "Professional"
-    elif "Mrs." in sender_name:
-        sender_type = "Professional"
-
-    return greeting, sender_type
+    if professional == True:
+        greeting = f"Dear {sender_name},"
+    else:
+        greeting = f"Hi {sender_name},"
+    return greeting, professional
 
 if __name__ == "__main__":
     sender_name = input("Enter sender name: ")
-    greeting, sender_type = generate_email_greeting(sender_name)
+    professional = is_professional(sender_name)
+    greeting, sender_type = generate_email_greeting(sender_name, professional)
     
-    print("\nGenerated Greeting:")
-    print(greeting)
-    print("Sender Type:", sender_type)
+    print("\nGenerated Greeting:", greeting)
+    print("Sender is professional:", sender_type)

@@ -16,5 +16,3 @@ def generate_email_greeting(sender_name, is_professional=True):
         return f"Dear {sender_name},"
     else:
         return f"Hello {sender_name},"
-
-test1='testing'
